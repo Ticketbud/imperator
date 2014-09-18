@@ -25,6 +25,14 @@ class Imperator::Command
     attribute attr_name, Boolean, options
   end
 
+  def self.date(attr_name, options={})
+    attribute attr_name, Date, options
+  end
+
+  def self.time(attr_name, options={})
+    attribute attr_name, Time, options
+  end
+
   def self.datetime(attr_name, options={})
     attribute attr_name, DateTime, options
   end
@@ -59,7 +67,7 @@ class Imperator::Command
   end
 
   def self.background_options
-    @background_options 
+    @background_options
   end
 
   def self.background_processor
